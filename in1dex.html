@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بوابة وزارة الصحة | EvilRP.me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #ff2e2e;
+            --bg-dark: #05070a;
+            --card-bg: #0f1218;
+            --text-main: #ffffff;
+            --text-dim: #94a3b8;
+            --accent-glow: rgba(255, 46, 46, 0.3);
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* تأثير الخلفية المتحركة */
+        .bg-glow {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -20%, #1e1b4b, transparent);
+            z-index: -1;
+        }
+
+        /* الهيدر الاحترافي */
+        header {
+            padding: 100px 20px;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(15, 18, 24, 0.8), transparent);
+        }
+
+        .logo-area h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin: 0;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+        }
+
+        .logo-area h1 span { color: var(--primary); text-shadow: 0 0 20px var(--primary); }
+
+        .status-bar {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 20px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1);
+            margin-top: 20px; font-size: 0.9rem;
+        }
+
+        .dot { width: 10px; height: 10px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981; }
+
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+
+        /* الشبكة التعريفية */
+        .grid-info {
+            display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 50px;
+        }
+
+        .info-card {
+            background: var(--card-bg); padding: 25px; border-radius: 15px;
+            border: 1px solid rgba(255,255,255,0.05); text-align: center;
+            transition: 0.3s;
+        }
+
+        .info-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+
+        .info-card i { font-size: 2rem; color: var(--primary); display: block; margin-bottom: 15px; }
+
+        /* البطاقات الكبيرة */
+        .main-card {
+            background: var(--card-bg); border-radius: 20px; padding: 40px;
+            border: 1px solid rgba(255,255,255,0.05); margin-bottom: 40px;
+            position: relative; overflow: hidden;
+        }
+
+        .main-card::before {
+            content: ''; position: absolute; top: 0; right: 0; width: 4px; height: 100%; background: var(--primary);
+        }
+
+        h2 { font-size: 2rem; margin-bottom: 30px; display: flex; align-items: center; gap: 15px; }
+
+        /* فورم التقديم */
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .full-width { grid-column: span 2; }
+
+        label { display: block; margin-bottom: 10px; color: var(--text-dim); font-size: 0.9rem; }
+
+        input, textarea, select {
+            width: 100%; padding: 15px; background: #05070a; border: 1px solid #1e293b;
+            border-radius: 10px; color: white; font-family: 'Cairo'; font-size: 1rem;
+            box-sizing: border-box; transition: 0.3s;
+        }
+
+        input:focus { border-color: var(--primary); outline: none; background: #0a0e17; }
+
+        .submit-btn {
+            background: var(--primary); color: white; border: none; padding: 20px;
+            width: 100%; border-radius: 12px; font-size: 1.3rem; font-weight: 800;
+            cursor: pointer; margin-top: 20px; transition: 0.4s;
+            box-shadow: 0 10px 20px rgba(255, 46, 46, 0.2);
+        }
+
+        .submit-btn:hover { filter: brightness(1.2); transform: scale(1.02); }
+
+        footer { text-align: center; padding: 50px; color: var(--text-dim); border-top: 1px solid rgba(255,255,255,0.05); }
+
+        @media (max-width: 768px) {
+            .grid-info, .form-grid { grid-template-columns: 1fr; }
+            .full-width { grid-column: span 1; }
+            .logo-area h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="bg-glow"></div>
+
+<header>
+    <div class="logo-area">
+        <h1>EVIL<span>RP</span>.ME</h1>
+        <div class="status-bar">
+            <div class="dot"></div>
+            أنظمة وزارة الصحة سحابية ونشطة
+        </div>
+    </div>
+</header>
+
+<div class="container">
+    
+    <div class="grid-info">
+        <div class="info-card">
+            <h3>أحدث المعدات</h3>
+            <p>نوفر أفضل سيارات الإسعاف والأدوات الطبية المتطورة.</p>
+        </div>
+        <div class="info-card">
+            <h3>رواتب مجزية</h3>
+            <p>نظام مكافآت ورواتب تصاعدي لجميع الرتب الطبية.</p>
+        </div>
+        <div class="info-card">
+            <h3>تدريب مكثف</h3>
+            <p>دورات تدريبية مستمرة للمبتدئين لرفع الكفاءة.</p>
+        </div>
+    </div>
+
+    <div class="main-card">
+        <h2>📜 ميثاق الشرف الطبي</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; color: var(--text-dim);">
+            <div>• الالتزام التام بالزي واللاسلكي الرسمي.</div>
+            <div>• عدم التدخل في النزاعات السياسية أو الإجرامية.</div>
+            <div>• سرعة الاستجابة للبلاغات (أقل من 3 دقائق).</div>
+            <div>• احترام جميع المواطنين مهما كانت خلفيتهم.</div>
+        </div>
+    </div>
+
+    <div class="main-card">
+        <h2>💉 نموذج طلب التوظيف الرسمي</h2>
+        <form id="proForm">
+            <div class="form-grid">
+                <div class="input-group">
+                    <label>الاسم الرباعي (IC)</label>
+                    <input type="text" id="name" placeholder="أدخل اسم الشخصية" required>
+                </div>
+                <div class="input-group">
+                    <label>المعرف الشخصي (ID)</label>
+                    <input type="number" id="id" placeholder="0000" required>
+                </div>
+                <div class="input-group">
+                    <label>العمر الواقعي</label>
+                    <input type="number" id="age" placeholder="16+" required>
+                </div>
+                <div class="input-group">
+                    <label>عدد ساعات التواجد اليومي</label>
+                    <select id="hours">
+                        <option value="2-4">2 إلى 4 ساعات</option>
+                        <option value="5-8">5 إلى 8 ساعات</option>
+                        <option value="8+">أكثر من 8 ساعات</option>
+                    </select>
+                </div>
+                <div class="input-group full-width">
+                    <label>لماذا ترغب في الانضمام لوزارة الصحة بـ EvilRP.me؟</label>
+                    <textarea id="reason" rows="4" placeholder="اكتب طموحاتك هنا..." required></textarea>
+                </div>
+            </div>
+            <button type="submit" class="submit-btn" id="subBtn">تقديم الطلب للمراجعة</button>
+        </form>
+    </div>
+
+</div>
+
+<footer>
+    منظومة EvilRP.me التقنية &copy; جميع الحقوق محفوظة لوزارة الصحة 2026
+</footer>
+
+<script>
+    document.getElementById('proForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const btn = document.getElementById('subBtn');
+        const webhook = "https://discord.com/api/webhooks/1474903770126352587/DPoq1_VbSe5901b0N1dwnGcDo8cK--_GYXJhmZIiblhgTCYlP5_YnXWn4yLZO_qdWnhg";
+        
+        btn.innerText = "⏳ جاري إرسال طلبك للديسكورد...";
+        btn.disabled = true;
+
+        const payload = {
+            username: "EvilRP Health Admin",
+            avatar_url: "https://i.imgur.com/8nNfIms.png",
+            embeds: [{
+                title: "🏥 طلب توظيف رسمي جديد",
+                color: 16723492,
+                fields: [
+                    { name: "👤 المتقدم:", value: "```" + document.getElementById('name').value + "```", inline: true },
+                    { name: "🆔 المعرف:", value: "```" + document.getElementById('id').value + "```", inline: true },
+                    { name: "🎂 العمر:", value: "```" + document.getElementById('age').value + "```", inline: true },
+                    { name: "⏰ التواجد:", value: "```" + document.getElementById('hours').value + "```", inline: true },
+                    { name: "📝 الخطاب الشخصي:", value: document.getElementById('reason').value }
+                ],
+                footer: { text: "EvilRP.me Cloud Recruitment" },
+                timestamp: new Date()
+            }]
+        };
+
+        fetch(webhook, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
+        }).then(() => {
+            alert('✅ مبروك! طلبك وصل للإدارة بنجاح، تابع ديسكورد السيرفر.');
+            document.getElementById('proForm').reset();
+            btn.innerText = "تقديم الطلب للمراجعة";
+            btn.disabled = false;
+        }).catch(() => {
+            alert('❌ فشل النظام في الإرسال، تواصل مع الدعم التقني.');
+            btn.disabled = false;
+        });
+    });
+</script>
+
+</body>
+</html>
